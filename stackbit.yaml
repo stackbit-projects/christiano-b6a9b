@@ -1,0 +1,667 @@
+stackbitVersion: ~0.3.0
+ssgName: jekyll
+publishDir: _site
+dataDir: _data
+pagesDir: ''
+models:
+  page_1:
+    type: page
+    label: Page 1
+    match:
+      - _drafts/gallery.md
+      - _drafts/page_simple.md
+      - _drafts/page_with_image.md
+      - _drafts/page_without_image.md
+      - _drafts/post_with_image.md
+      - _drafts/post_without_image.md
+      - _posts/design/2015-03-12-no-header-but-image.md
+      - _posts/design/2015-08-11-no-header.md
+      - _posts/design/2015-10-15-mediaelement_js.md
+      - pages/pages-root-folder/404.md
+    fields:
+      - type: string
+        name: layout
+        label: Layout
+      - type: string
+        name: subheadline
+        label: Subheadline
+      - type: string
+        name: title
+        label: Title
+      - type: markdown
+        name: teaser
+        label: Teaser
+      - type: list
+        name: categories
+        label: Categories
+        items:
+          type: string
+      - type: list
+        name: tags
+        label: Tags
+        items:
+          type: string
+      - type: list
+        name: gallery
+        label: Gallery
+        items:
+          type: object
+          fields:
+            - type: image
+              name: image_url
+              label: Image Url
+            - type: string
+              name: caption
+              label: Caption
+      - type: object
+        name: image
+        label: Image
+        fields:
+          - type: string
+            name: thumb
+            label: Thumb
+          - type: image
+            name: title
+            label: Title
+          - type: string
+            name: homepage
+            label: Homepage
+          - type: string
+            name: caption
+            label: Caption
+          - type: string
+            name: caption_url
+            label: Caption Url
+          - type: string
+            name: header
+            label: Header
+          - type: string
+            name: url
+            label: Url
+      - type: string
+        name: meta_description
+        label: Meta Description
+      - type: string
+        name: permalink
+        label: Permalink
+      - type: string
+        name: header
+        label: Header
+      - type: boolean
+        name: mediaplayer
+        label: Mediaplayer
+      - type: boolean
+        name: sitemap
+        label: Sitemap
+  page_2:
+    type: page
+    label: Page 2
+    match:
+      - _drafts/page_with_table_of_contents.md
+      - _posts/design/2014-08-19-page-fullwidth.md
+      - _posts/design/2014-09-10-portfolio.md
+      - _posts/design/2014-09-13-grid.md
+      - _posts/design/2015-08-16-typography.md
+      - pages/documentation.md
+    fields:
+      - type: string
+        name: layout
+        label: Layout
+      - type: string
+        name: subheadline
+        label: Subheadline
+      - type: string
+        name: title
+        label: Title
+      - type: markdown
+        name: teaser
+        label: Teaser
+      - type: list
+        name: categories
+        label: Categories
+        items:
+          type: string
+      - type: object
+        name: header
+        label: Header
+        fields:
+          - type: image
+            name: image_fullwidth
+            label: Image Fullwidth
+          - type: image
+            name: image
+            label: Image
+          - type: string
+            name: background-color
+            label: Background Color
+          - type: string
+            name: caption
+            label: Caption
+          - type: string
+            name: caption_url
+            label: Caption Url
+      - type: boolean
+        name: breadcrumb
+        label: Breadcrumb
+      - type: string
+        name: permalink
+        label: Permalink
+      - type: object
+        name: image
+        label: Image
+        fields:
+          - type: image
+            name: thumb
+            label: Thumb
+          - type: image
+            name: homepage
+            label: Homepage
+          - type: string
+            name: caption
+            label: Caption
+          - type: string
+            name: caption_url
+            label: Caption Url
+      - type: string
+        name: meta_teaser
+        label: Meta Teaser
+  page_3:
+    type: page
+    label: Page 3
+    match:
+      - _drafts/video.md
+      - _posts/design/2014-09-14-video.md
+    fields:
+      - type: string
+        name: layout
+        label: Layout
+      - type: string
+        name: subheadline
+        label: Subheadline
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: teaser
+        label: Teaser
+      - type: list
+        name: categories
+        label: Categories
+        items:
+          type: string
+      - type: list
+        name: tags
+        label: Tags
+        items:
+          type: string
+      - type: markdown
+        name: iframe
+        label: Iframe
+      - type: object
+        name: video
+        label: Video
+        fields:
+          - type: string
+            name: embedURL
+            label: Embed URL
+          - type: string
+            name: contentURL
+            label: Content URL
+          - type: string
+            name: thumbnailUrl
+            label: Thumbnail Url
+      - type: boolean
+        name: show_meta
+        label: Show Meta
+  include:
+    type: page
+    label: Include
+    folder: _includes
+    match: '*'
+    fields: []
+  page_4:
+    type: page
+    label: Page 4
+    match:
+      - _posts/design/2014-07-09-post-left-sidebar.md
+      - _posts/design/2014-07-10-breadcrumb.md
+      - _posts/design/2014-07-10-page.md
+      - _posts/design/2014-07-10-post-right-sidebar.md
+      - _posts/design/2014-09-15-gallery.md
+      - _posts/design/2014-10-08-header-image-pattern.md
+      - _posts/design/2014-10-09-header-full-width-image.md
+      - _posts/design/2014-10-09-header-image-color.md
+      - _posts/design/2014-10-09-header-logo-only.md
+      - _posts/design/2015-02-10-header-with-text.md
+      - _posts/design/2015-08-15-comments.md
+      - pages/changelog.md
+      - pages/contact.md
+      - pages/design.md
+      - pages/getting-started.md
+      - pages/headers.md
+      - pages/info.md
+      - pages/roadmap.md
+      - pages/search.md
+    fields:
+      - type: string
+        name: layout
+        label: Layout
+      - type: string
+        name: sidebar
+        label: Sidebar
+      - type: string
+        name: subheadline
+        label: Subheadline
+      - type: string
+        name: title
+        label: Title
+      - type: markdown
+        name: teaser
+        label: Teaser
+      - type: boolean
+        name: breadcrumb
+        label: Breadcrumb
+      - type: list
+        name: tags
+        label: Tags
+        items:
+          type: string
+      - type: list
+        name: categories
+        label: Categories
+        items:
+          type: string
+      - type: object
+        name: image
+        label: Image
+        fields:
+          - type: image
+            name: thumb
+            label: Thumb
+          - type: image
+            name: title
+            label: Title
+          - type: string
+            name: caption_url
+            label: Caption Url
+          - type: string
+            name: caption
+            label: Caption
+          - type: image
+            name: homepage
+            label: Homepage
+      - type: string
+        name: meta_teaser
+        label: Meta Teaser
+      - type: string
+        name: author
+        label: Author
+      - type: list
+        name: gallery
+        label: Gallery
+        items:
+          type: object
+          fields:
+            - type: image
+              name: image_url
+              label: Image Url
+            - type: string
+              name: caption
+              label: Caption
+      - type: object
+        name: header
+        label: Header
+        fields:
+          - type: image
+            name: image
+            label: Image
+          - type: image
+            name: pattern
+            label: Pattern
+          - type: string
+            name: caption
+            label: Caption
+          - type: string
+            name: caption_url
+            label: Caption Url
+          - type: image
+            name: image_fullwidth
+            label: Image Fullwidth
+          - type: string
+            name: background-color
+            label: Background Color
+          - type: string
+            name: title
+            label: Title
+      - type: boolean
+        name: comments
+        label: Comments
+      - type: boolean
+        name: show_meta
+        label: Show Meta
+      - type: string
+        name: meta_title
+        label: Meta Title
+      - type: string
+        name: permalink
+        label: Permalink
+      - type: boolean
+        name: sitemap
+        label: Sitemap
+  page:
+    type: page
+    label: Page
+    folder: pages
+    match:
+      - redirected_page.md
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: layout
+        label: Layout
+      - type: boolean
+        name: sitemap
+        label: Sitemap
+      - type: string
+        name: permalink
+        label: Permalink
+      - type: string
+        name: redirect_to
+        label: Redirect To
+  pages_root_folder:
+    type: page
+    label: Pages Root Folder
+    folder: pages/pages-root-folder
+    match: '*'
+    exclude:
+      - 404.md
+    fields:
+      - type: string
+        name: layout
+        label: Layout
+      - type: object
+        name: header
+        label: Header
+        fields:
+          - type: image
+            name: image_fullwidth
+            label: Image Fullwidth
+      - type: object
+        name: widget1
+        label: Widget 1
+        fields:
+          - type: string
+            name: title
+            label: Title
+          - type: string
+            name: url
+            label: Url
+          - type: image
+            name: image
+            label: Image
+          - type: markdown
+            name: text
+            label: Text
+      - type: object
+        name: widget2
+        label: Widget 2
+        fields:
+          - type: string
+            name: title
+            label: Title
+          - type: string
+            name: url
+            label: Url
+          - type: markdown
+            name: text
+            label: Text
+          - type: markdown
+            name: video
+            label: Video
+      - type: object
+        name: widget3
+        label: Widget 3
+        fields:
+          - type: string
+            name: title
+            label: Title
+          - type: string
+            name: url
+            label: Url
+          - type: image
+            name: image
+            label: Image
+          - type: markdown
+            name: text
+            label: Text
+      - type: object
+        name: callforaction
+        label: Callforaction
+        fields:
+          - type: string
+            name: url
+            label: Url
+          - type: string
+            name: text
+            label: Text
+          - type: string
+            name: style
+            label: Style
+      - type: string
+        name: permalink
+        label: Permalink
+      - type: boolean
+        name: homepage
+        label: Homepage
+  authors:
+    type: data
+    label: Authors
+    file: authors.yml
+    fields:
+      - type: object
+        name: phlow
+        label: Phlow
+        fields:
+          - type: string
+            name: name
+            label: Name
+          - type: string
+            name: siterole
+            label: Siterole
+          - type: string
+            name: uri
+            label: Uri
+          - type: string
+            name: twitter
+            label: Twitter
+  data_1:
+    type: data
+    label: Data 1
+    folder: ''
+    fields:
+      - type: string
+        name: info_website
+        label: Info Website
+      - type: string
+        name: archive
+        label: Archive
+      - type: string
+        name: blog_archive
+        label: Blog Archive
+      - type: string
+        name: blog
+        label: Blog
+      - type: string
+        name: comments_headline
+        label: Comments Headline
+      - type: string
+        name: more
+        label: More
+      - type: string
+        name: more_articles
+        label: More Articles
+      - type: string
+        name: navigation_title
+        label: Navigation Title
+      - type: string
+        name: new_blog_entries
+        label: New Blog Entries
+      - type: string
+        name: next
+        label: Next
+      - type: string
+        name: next_posts
+        label: Next Posts
+      - type: string
+        name: previous
+        label: Previous
+      - type: string
+        name: previous_posts
+        label: Previous Posts
+      - type: string
+        name: read
+        label: Read
+      - type: string
+        name: read_more
+        label: Read More
+      - type: string
+        name: if_you_are_not_redirected_automatically
+        label: If You Are Not Redirected Automatically
+      - type: string
+        name: click_here
+        label: Click Here
+      - type: string
+        name: next_post_in
+        label: Next Post In
+      - type: string
+        name: previous_post_in
+        label: Previous Post In
+      - type: string
+        name: breadcrumb_start
+        label: Breadcrumb Start
+      - type: string
+        name: edit
+        label: Edit
+      - type: string
+        name: this_content_is_open_source
+        label: This Content Is Open Source
+      - type: string
+        name: help_improve_it
+        label: Help Improve It
+      - type: string
+        name: enter_search_term
+        label: Enter Search Term
+  navigation:
+    type: data
+    label: Navigation
+    file: navigation.yml
+    isList: true
+    items:
+      type: object
+      fields:
+        - type: string
+          name: title
+          label: Title
+        - type: string
+          name: url
+          label: Url
+        - type: string
+          name: side
+          label: Side
+        - type: list
+          name: dropdown
+          label: Dropdown
+          items:
+            type: object
+            fields:
+              - type: string
+                name: title
+                label: Title
+              - type: string
+                name: url
+                label: Url
+  network:
+    type: data
+    label: Network
+    file: network.yml
+    isList: true
+    items:
+      type: model
+      models:
+        - object_6cgakjra0f
+        - object_962vivjaag
+  services:
+    type: data
+    label: Services
+    file: services.yml
+    isList: true
+    items:
+      type: model
+      models:
+        - object_7tklf41rg5
+        - object_j1xsvig6ht
+  socialmedia:
+    type: data
+    label: Socialmedia
+    file: socialmedia.yml
+    isList: true
+    items:
+      type: object
+      fields:
+        - type: string
+          name: name
+          label: Name
+        - type: string
+          name: url
+          label: Url
+        - type: string
+          name: class
+          label: Class
+        - type: string
+          name: title
+          label: Title
+  object_6cgakjra0f:
+    type: object
+    label: Object 1
+    fields:
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: url
+        label: Url
+      - type: string
+        name: class
+        label: Class
+      - type: string
+        name: title
+        label: Title
+  object_962vivjaag:
+    type: object
+    label: Object 2
+    fields:
+      - type: string
+        name: menu_name
+        label: Menu Name
+  object_7tklf41rg5:
+    type: object
+    label: Object 3
+    fields:
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: url
+        label: Url
+      - type: string
+        name: title
+        label: Title
+  object_j1xsvig6ht:
+    type: object
+    label: Object 4
+    fields:
+      - type: string
+        name: menu_name
+        label: Menu Name
